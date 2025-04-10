@@ -15,7 +15,7 @@
 
 `llama_1B_training_loss_matches` and `GRPO_memory_efficient_linear_works` have their own separate colab notebooks.
 
-### Summary
+### Comments
 
 This problem was split into multiple notebooks, in order to better isolate memory measurement. Additionally, for the largest test case in `MemEffLinear.ipynb` where `bsz = 4, qlen = 4096, hd = 4096, vocab = 128K`, I used an A100 to demonstrate a memory usage reduction from 25GB -> 11.30 GB. This was isolated since A100 compute is expensive, and I didn't want to burn that on the other problems.
 
@@ -25,4 +25,4 @@ This problem was split into multiple notebooks, in order to better isolate memor
 
 `Unsloth_Problem_5_Llama_1B.ipynb` compares the training loss between MemEffLinear and regular linear.
 
-[ADD GRPO NOTEBOOK HERE] completes 250 steps of a GRPO training run on Llama 3.1 8B, just to demonstrate it works. This required some slight modification to the signature to get the `MemEffLinear` module to accept `selective_log_softmax`.
+`Unsloth_Problem_5_Other_Loss_Functions.ipynb` completes 250 steps of a GRPO training run on Llama 3.1 8B, just to demonstrate it works. This required some slight modification to the signature to get the `MemEffLinear` module to accept `selective_log_softmax`.
