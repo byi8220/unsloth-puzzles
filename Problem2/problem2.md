@@ -20,8 +20,12 @@ In addition to patching torch and bitsandbytes, I had to make some modifications
 
 **Estimated Total Points: 5**
 
-Getting FSDP2 working with QLoRA and accelerate is an incredibly involved process with many parts. I have provided a semi-funcitonal MVP.
+### Comments
 
-### Summary
+Getting FSDP2 working with QLoRA and accelerate is an incredibly involved process with many parts. I have provided a semi-functional MVP.
 
-TODO: Add a writeup
+This problem appears to be one in active development, with `bitsandbytes`, `torch`, `accelerate`, and `transformers` all needing to be impacted to get this feature working to spec. `accelerate`'s FSDP2 support is still in its early stages, and the solution in this notebook is merely a bare minimum prototype.
+
+For what it's worth, I've already had to send out a [tiny PR](https://github.com/huggingface/transformers/pull/37147) to `transformers`, pointed out [a possible blocker](https://discuss.pytorch.org/t/very-small-stupid-question-about-fsdpparam-init-sharded-param/218875) in `torch`, and ran into a [memory hogging issue](https://github.com/huggingface/accelerate/pull/3482) in `accelerate` while attempting to solve this problem.
+
+Unless I'm just missing an obvious solution or doing something wrong (which is very possible), this seems like a lot of work if one wishes to get anything remotely professional working.

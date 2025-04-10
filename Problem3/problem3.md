@@ -24,9 +24,6 @@
 
 I'm not fully sure what `no_torch_compile_BnB` and `torch_compile_BnB` are asking for (or why they are separate criteria). I compiled what I could.
 
-### Summary
+### Comments
 
 A huge thanks to [RameshBabuAsh](https://github.com/RameshBabuAsh) and [Ghogha_Atif](https://discuss.pytorch.org/u/Ghogha_Atif/), who were also working on the Unsloth Puzzles. We seem to have all discovered the same [issue](https://discuss.pytorch.org/t/how-to-solve-the-graph-break-happen-in-torch-compile/216858/) with `Params4bit`, which was a bug that was fixed in torch nightly.
-
-
-TODO: Add a writeup
